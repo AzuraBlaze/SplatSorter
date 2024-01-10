@@ -45,6 +45,11 @@
         "xutility": "cpp",
         "set": "cpp",
         "vector": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "algorithm": "cpp",
+        "filesystem": "cpp",
+        "functional": "cpp",
+        "ranges": "cpp",
+        "span": "cpp"
     }
 }

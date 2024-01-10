@@ -39,6 +39,8 @@ class Player
 };
 
 std::ostream& operator<<(std::ostream& os, const Player& player);
+bool operator==(const Player& lhs, const Player& rhs); //Compares names
+bool operator<(const Player& lhs, const Player& rhs); //Compares ratings
 
 template <>
 struct std::hash<Player>
@@ -46,15 +48,6 @@ struct std::hash<Player>
     std::size_t operator()(const Player& player) const
     {
         return std::hash<std::string>()(player.name());
-    }
-};
-
-template <>
-struct std::equal_to<Player>
-{
-    bool operator()(const Player& lhs, const Player& rhs) const
-    {
-        return std::equal_to<std::string>()(lhs.name(), rhs.name());
     }
 };
 

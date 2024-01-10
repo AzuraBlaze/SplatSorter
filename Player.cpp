@@ -48,5 +48,17 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
     os << "Wins: " << player.wins() << std::endl;
     os << "Losses: " << player.losses() << std::endl;
 
+    os << "Rating: " << player.rating() << std::endl; //TEMP
+
     return os;
+}
+
+bool operator==(const Player& lhs, const Player& rhs)
+{
+    return lhs.name() == rhs.name();
+}
+
+bool operator<(const Player& lhs, const Player& rhs)
+{
+    return lhs.rating() < rhs.rating();
 }

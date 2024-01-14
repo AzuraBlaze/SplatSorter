@@ -5,6 +5,8 @@
 #include <iostream>
 #include <functional>
 
+#include "Common.hpp"
+
 class Player
 {
     std::string name_m;

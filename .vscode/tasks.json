@@ -8,9 +8,9 @@
                 "-fdiagnostics-color=always",
                 "-std=c++20",
                 "-g",
-                /*"${file}"*/ "${fileDirname}\\**.cpp",
+                "${fileDirname}\\**.cpp", // "${file}
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\main.exe" //"${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -13,7 +13,7 @@ class Player
     int wins_m;
     int losses_m;
 
-    public:
+public:
 
     Player()
     : name_m(), wins_m(0), losses_m(0) {}

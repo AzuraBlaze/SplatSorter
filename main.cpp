@@ -1,54 +1,31 @@
 #include <iostream>
+#include <array>
 
 #include "Common.hpp"
+#include "Roster.hpp"
 #include "Menu.hpp"
+#include "IO.hpp"
 
 using namespace std;
 using namespace SugarPP;
 
-static bool is_running = true; 
-
 int main()
 {
-    cout << endl;
+    cout << newline;
 
-    Menu menu("What would you like to do?");
-    menu.add_options
+    Menu home_menu("Home Options");
+    home_menu.back_button_title("Exit");
+    home_menu.add_options
     ({
         {
-            "Exit", []()
+            "Lobby Options", []()
             {
-                is_running = false;
-            }
-        },
-        {
-            "Add player", []()
-            {
-                //
-            }
-        },
-        {
-            "Edit player", []()
-            {
-                //
-            }
-        },
-        {
-            "Delete player", []()
-            {
-                //
+                return Menu::Option::Result();
             }
         }
     });
 
-    while(is_running)
-    {
-        cout << endl;
+    home_menu.launch();
 
-        menu.launch();
-
-        cout << endl;
-    }
-
-    cout << endl;
+    cout << newline;
 }

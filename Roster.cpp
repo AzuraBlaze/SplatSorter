@@ -3,13 +3,20 @@
 using namespace std;
 using namespace SugarPP;
 
-Roster::iterator Roster::search(const string& player_name)
+
+size_t Roster::size() const
 {
-    for(size_t i = 0; i < players_m.size(); i++)
-        if(players_m[i].name() == player_name)
-            return players_m.begin() + i;
-    
-    return players_m.end();
+    return players_m.size();
+}
+
+size_t Roster::length() const
+{
+    return size(); 
+}
+
+bool Roster::empty() const
+{
+    return (size() == 0);
 }
 
 bool Roster::contains(const string& player_name) const
@@ -37,4 +44,24 @@ Roster& Roster::add_player(const Player& player)
 Roster& Roster::add_player(const string& name, int wins, int losses)
 {
     return add_player(Player(name, wins, losses));
+}
+
+
+Roster::iterator Roster::begin()
+{
+    return players_m.begin();
+}
+
+Roster::iterator Roster::end()
+{
+    return players_m.end();
+}
+
+Roster::iterator Roster::search(const string& player_name)
+{
+    for(size_t i = 0; i < players_m.size(); i++)
+        if(players_m[i].name() == player_name)
+            return players_m.begin() + i;
+    
+    return players_m.end();
 }

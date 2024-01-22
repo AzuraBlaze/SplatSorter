@@ -10,7 +10,7 @@ class Team
 {
     std::unordered_set<Player> players_m;
 
-    public:
+public:
 
     using iterator = std::unordered_set<Player>::iterator;
 

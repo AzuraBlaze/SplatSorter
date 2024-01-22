@@ -12,6 +12,7 @@ using namespace SugarPP;
 void launch_main_menu();
 void launch_lobby_menu();
 
+
 int main()
 {
     cout << newline;
@@ -20,6 +21,7 @@ int main()
 
     cout << newline;
 }
+
 
 void launch_main_menu()
 {

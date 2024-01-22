@@ -124,7 +124,7 @@ void Menu::display(const string& prompt)
     size_t option_number = input<size_t>(prompt);
     Option::Result result = select(option_number);
     
-    if(result.empty() == false)
+    if(!result.empty())
     {
         cout << page_break;
         cout << result;

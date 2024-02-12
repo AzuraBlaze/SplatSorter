@@ -60,5 +60,5 @@ bool operator==(const Player& lhs, const Player& rhs)
 
 bool operator<(const Player& lhs, const Player& rhs)
 {
-    return lhs.rating() < rhs.rating();
+    return lhs.rating() > rhs.rating();
 }

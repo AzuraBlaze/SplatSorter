@@ -42,7 +42,7 @@ const string& Menu::title() const
     return title_m;
 }
 
-void Menu::title(const std::string& new_title)
+void Menu::title(const string& new_title)
 {
     title_m = new_title;
 }
@@ -114,7 +114,7 @@ void Menu::display(const string& prompt)
     cout << title_m << newline;
     cout << newline;
 
-    cout << indent << "0. " << back_button_title_m << newline;
+    cout << indent << "0. <- " << back_button_title_m << newline;
 
     for(const auto& [i, option] : Enumerate(options_m, 1))
         cout << indent << i << ". " << option.name() << newline;
